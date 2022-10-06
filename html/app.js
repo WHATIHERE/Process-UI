@@ -2,9 +2,10 @@
 window.onload = function () {
 	window.addEventListener('message', (event) => {
 		if (event.data.itemLabel) {
-			document.getElementById('img112').src = 'nui://nc_inventory/html/img/items/' + itemLabel + '.png';
-			document.getElementById('img2').src = 'nui://nc_inventory/html/img/items/' + itemgive + '.png';
+			document.getElementById('img112').src = 'nui://nc_inventory/html/img/items/' + event.data.itemLabel + '.png';
+			document.getElementById('img2').src = 'nui://nc_inventory/html/img/items/' + event.data.itemgive + '.png';
 			document.getElementById('showProcess').style.display = 'block';
+
 		}
 	});
 	window.addEventListener('keyup', (event) => {
